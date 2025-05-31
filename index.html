@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>READ WITH RITIK - Tuition & Exam Prep</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f8ff;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4a90e2, #7ec8e3);
+            color: white;
+            padding: 1rem;
+            animation: gradient-slide 5s infinite alternate;
+        }
+
+        @keyframes gradient-slide {
+            from { background-position: 0% 50%; }
+            to { background-position: 100% 50%; }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            font-size: 1.8rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #74ebd5, #9face6);
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #fff;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero button {
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #3c7fd9;
+        }
+
+        section {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .course-container, .resource-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .course-card, .resource-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 250px;
+            transition: transform 0.3s;
+        }
+
+        .course-card:hover, .resource-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-card h3, .resource-item h4 {
+            color: #4a90e2;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        form input, form textarea {
+            width: 80%;
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 0.7rem 1.5rem;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #4a90e2;
+            color: white;
+            padding: 1rem;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            margin: 1rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .note-icon {
+            width: 100px;
+            margin-top: 1rem;
+        }
+
+        .question-paper-img {
+            margin-top: 1rem;
+            width: 100%;
+            max-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="animate__animated animate__pulse animate__infinite">READ WITH RITIK</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Your Path to Success Starts Here</h2>
+            <p>Online, Offline, and Home Tuitions for Classes 9–12 & Competitive Exams (JEE, NEET, CUET, NDA)</p>
+            <button onclick="scrollToCourses()">Explore Courses</button>
+        </div>
+    </section>
+
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <div class="course-container">
+            <div class="course-card">
+                <h3>Class 9–10 Foundation</h3>
+                <p>Strong base in Maths, Science & English.</p>
+            </div>
+            <div class="course-card">
+                <h3>Class 11–12 Advanced</h3>
+                <p>Specialized tuition with conceptual clarity.</p>
+            </div>
+            <div class="course-card">
+                <h3>JEE / NEET / CUET / NDA</h3>
+                <p>Complete syllabus + practice tests + strategy sessions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources">
+        <h2>Study Resources</h2>
+        <div class="resource-list">
+            <div class="resource-item">
+                <h4>Video Lectures</h4>
+                <p>High-quality recorded and live sessions.</p>
+                <iframe src="https://www.youtube.com/embed/JsmqT31hIMA" frameborder="0" allowfullscreen></iframe>
+                <p><a href="https://www.youtube.com/@readwithritik" target="_blank">Visit YouTube Channel</a></p>
+            </div>
+            <div class="resource-item">
+                <h4>Downloadable Notes</h4>
+                <p><a href="https://t.me/readwithritik/8" download>Download Class 10 Notes (PDF)</a></p>
+                <p><a href="https://t.me/readwithritik/4" download>Download Class 12 Notes</a></p>
+                <p><a href="https://t.me/readwithritik" target="_blank">Get More Notes on Telegram</a></p>
+                <img src="https://cdn-icons-png.flaticon.com/512/3580/3580382.png" alt="Notes Image" class="note-icon">
+            </div>
+            <div class="resource-item">
+                <h4>Assignments</h4>
+                <p><a href="https://t.me/readwithritik/9" download>Download Sample Assignment</a></p>
+                <a href="https://t.me/readwithritik/9" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3209/3209265.png" alt="Question Paper" class="question-paper-img">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+            <p>Or chat with us directly:</p>
+            <a href="https://wa.me/918882549001" target="_blank">WhatsApp Chat</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 READ WITH RITIK. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function scrollToCourses() {
+            document.getElementById('courses').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
